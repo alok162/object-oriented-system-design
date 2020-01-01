@@ -99,3 +99,13 @@ class ParkingFloor(ABC):
 
     def assign_vehicle_to_spot(self, vehicle: object, spot: object):
         spot.assign_vehicle(vehicle)
+
+    def remove_vehicle_from_spot(self, vehicle: object, spot: object):
+        spot.remove_vehicle(vehicle)
+
+
+# class ParkingLot:
+#     def __init__(self):
+#         self.__motor_bike_spot_count = 0
+#         self.__car_spot_count = 0
+#         self.__truck_spot_count = 0
