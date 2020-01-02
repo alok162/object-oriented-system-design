@@ -39,6 +39,9 @@ class Member:
 
 
 class Admin(Member):
+    def __init__(self, member_account: object):
+        super().__init__(self, member_account)
+
     def block_member(self):
         pass
 
