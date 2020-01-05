@@ -191,3 +191,17 @@ class Comment:
         self.__like_count = like_count
         self.__text = text
         self.__user = user
+
+
+class Message:
+    def __init__(self, msg_id, msg_body, media):
+        self.__msg_id = msg_id
+        self.__msg_body = msg_id
+        self.__media = media
+        self.__recipients = []
+
+    def add_recipient(self, recipient):
+        self.__recipients.append(recipient)
+
+    def delete_recipient(self, recipient):
+        self.__recipients.remove(recipient)
