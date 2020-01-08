@@ -127,3 +127,27 @@ class Order:
         pass
 
 
+class ShipmentLog:
+    def __init__(self, shipment_id, status: object):
+        self.__shipment_id = shipment_id
+        self.__status = status
+
+
+class Shipment:
+    def __init__(self, ship_id, ship_date, arrival_date):
+        self.__ship_id = ship_id
+        self.__ship_date = ship_date
+        self.__ship_log = None
+
+    def add_ship_log(self, log):
+        self.__ship_log = log
+
+
+class Notification:
+    def __init__(self, notification_id, created_at, content):
+        self.__id = notification_id
+        self.__created_at = created_at
+        self.__content = content
+
+    def send_notification(self, user):
+        pass
