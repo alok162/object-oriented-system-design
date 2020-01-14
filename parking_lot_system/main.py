@@ -104,8 +104,12 @@ class ParkingFloor(ABC):
         spot.remove_vehicle(vehicle)
 
 
-# class ParkingLot:
-#     def __init__(self):
-#         self.__motor_bike_spot_count = 0
-#         self.__car_spot_count = 0
-#         self.__truck_spot_count = 0
+class ParkingLot:
+    def __init__(self, floor_name):
+        self.__motor_bike_spot_count = 0
+        self.__car_spot_count = 0
+        self.__truck_spot_count = 0
+        self.__floor_name = floor_name
+
+    def get_new_parking_ticket(self, vehicle_type):
+        if vehicle_type == 'car':
