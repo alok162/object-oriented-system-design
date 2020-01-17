@@ -56,8 +56,17 @@ class Waiter(Employee):
 
 
 class Chef(Employee):
-    def prepare_order(self, order: object):
-        pass
+    def __init__(self, chef_id):
+        self.__chef_id = chef_id
+        self.__orders_request = []
+
+    def add_order(self, order: object):
+        self.__orders_request.append(order)
+
+    def prepare_order(self):
+        order = 0
+        while order < len(self.__orders_request):
+            pass
 
 
 class Address:
