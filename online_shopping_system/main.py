@@ -123,8 +123,15 @@ class Order:
     def show_status(self):
         return self.__status
 
+    def cancel_order(self):
+        pass
+
     def shipment(self):
         pass
+
+
+class Payment:
+    pass
 
 
 class ShipmentLog:
