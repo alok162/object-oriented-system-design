@@ -92,8 +92,8 @@ class CartItem:
 
 
 class ShoppingCart:
-    def __init__(self, cart_item: object):
-        self.__cart_items = cart_item
+    def __init__(self):
+        self.__cart_items = []
 
     def add_item(self, cart_item):
         self.__cart_items.append(cart_item)
