@@ -78,6 +78,15 @@ class Product:
         self.__price = price
 
 
+class Offer:
+    def __init__(self, offer):
+        self.__offer = offer
+
+
+class Coupon:
+    pass
+
+
 class CartItem:
     def __init__(self, product_id, price):
         self.__product_id = product_id
@@ -90,6 +99,12 @@ class CartItem:
     def delete_quantity(self):
         self.__quantity -= 1
 
+    def apply_offer(self, offer: object):
+        pass
+
+    def apply_coupon(self, coupon: object):
+        pass
+
 
 class ShoppingCart:
     def __init__(self):
@@ -101,10 +116,10 @@ class ShoppingCart:
     def delete_item(self, cart_item):
         self.__cart_items.remove(cart_item)
 
-    def add_quantity(self, cart_item: object):
+    def increase_quantity(self, cart_item: object):
         cart_item.add_quantity()
 
-    def delete_quantity(self, cart_item: object):
+    def decrease_quantity(self, cart_item: object):
         cart_item.delete_quantity()
 
     def checkout(self):
