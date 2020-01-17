@@ -44,15 +44,19 @@ class Manager(Employee):
 
 
 class Waiter(Employee):
-    def take_order(self):
-        pass
+    def __init__(self, waiter_id):
+        self.__waiter_id = waiter_id
+        self.__orders = []
+
+    def take_order(self, order: object):
+        self.__orders.append(order)
 
     def serve_order(self):
         pass
 
 
 class Chef(Employee):
-    def prepare_order(self):
+    def prepare_order(self, order: object):
         pass
 
 
