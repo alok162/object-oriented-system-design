@@ -1,24 +1,14 @@
 # Foobar
 
-Foobar is a Python library for dealing with word pluralization.
-
-## Installation
-
-Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
-
-```bash
-pip install foobar
-```
+Microservice architecture for movie ticket booking system.
 
 ## Usage1
 design_quetionsList of microservices and port configurations are mentioned here for easy start.
 
-```
 1. Authorization service  - Running on port: 8000. Takes care of authorization, implemented via gateway server.
 2. Notifications Service - Responsible for push notifications and messages to customers. Uses kafka.  
 3. Gateway API server - On port 8765.
 4. Zipkin distributed Server - Using kafka, distributed traces are collected and viewed.
-```
 
 
 1. Authorization service  - Running on port: 8000. Takes care of authorization, implemented via gateway server.
