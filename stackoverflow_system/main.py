@@ -61,8 +61,7 @@ class Notification:
 
 class Quetion:
     def __init__(self, title: str, description: str, view_count: int,
-                 creation_time, update_time,
-                 asking_member, comments: list, answers: list):
+                 creation_time, update_time, asking_member):
         self.__title = title
         self.__description = description
         self.__view_count = view_count

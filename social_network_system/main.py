@@ -74,11 +74,17 @@ class User(Person):
     def delete_post(self, post: object):
         self.__posts.remove(post)
 
-    def create_page(self, page: object):
+    def follow_page(self, page: object):
         self.__pages.append(page)
 
-    def delete_page(self, page: object):
+    def unfollow_page(self, page: object):
         self.__pages.remove(page)
+
+    def follow_group(self, group: object):
+        self.__group_follows.append(group)
+
+    def unfollow_group(self, group: object):
+        self.__group_follows.remove(group)
 
 
 class ConnectionInvititation:

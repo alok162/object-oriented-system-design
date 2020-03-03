@@ -154,9 +154,9 @@ if __name__ == "__main__":
     online_reader_sys_obj.get_library().add_book(design_book)
 
     # create user objects
-    user1 = User(1, "", 'Peter')
-    user2 = User(2, "", "Jack")
-    user3 = User(3, "", "Ryan")
+    user1 = User(1, 'Peter', "")
+    user2 = User(2, "Jack", "")
+    user3 = User(3, "Ryan", "")
     # add user objects into in memory db
     online_reader_sys_obj.get_user_manager().register_user(user1)
     online_reader_sys_obj.get_user_manager().register_user(user2)
@@ -168,6 +168,7 @@ if __name__ == "__main__":
     # start reading book
     online_reader_sys_obj.get_display_obj().turn_page_forward()
     online_reader_sys_obj.get_display_obj().turn_page_forward()
+    print(online_reader_sys_obj.get_active_user().get_name())
 
 
 
