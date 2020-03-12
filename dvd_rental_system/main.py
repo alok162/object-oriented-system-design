@@ -126,3 +126,6 @@ if __name__ =='__main__':
     rent_system_obj.get_dvd_library_obj().add_dvd(dvd1)
     rent_system_obj.get_dvd_library_obj().add_dvd(dvd2)
     rent_system_obj.get_dvd_library_obj().add_dvd(dvd3)
+
+    # lent dvd
+    rent_system_obj.get_dvd_library_obj().rent_dvd_to_customer(user1, dvd1)
