@@ -51,6 +51,9 @@ class DvdLibrary:
             dvd_item.checkout_item()
             user.payment()
             user.ordered()
+    
+    def check_for_fine(self):
+        pass
 
 
 class User:
