@@ -68,11 +68,15 @@ class Quetion:
         self.__creation_time = creation_time
         self.__update_time = update_time
         self.__asking_member = asking_member
-        self.__comments = comments
-        self.__answers = answers
+        self.__comments = []
+        self.__answers = []
 
     def add_comment(self, comment):
         self.__comments.append(comment)
+       
+    def add_answer(self, answer):
+        self.__answers.append(answer)
+
 
 
 class Comments:
@@ -91,3 +95,7 @@ class Answer:
         self.__down_vote_count = down_vote_count
         self.__creation_time = creation_time
         self.__post_member = post_member
+        self.__comments = []
+    
+   def add_comment(self, comment):
+        self.__comments.append(comment)
